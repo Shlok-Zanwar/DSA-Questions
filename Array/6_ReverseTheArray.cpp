@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
 void reverseArray(int arr[], int len){
     int i;
     for(i = 0; i < len/2; i ++){
@@ -14,6 +15,7 @@ void reverseArray(int arr[], int len){
     }
 }
 
+
 void printArray(int arr[], int len){
     int i;
     for(i = 0; i < len; i++){
@@ -21,12 +23,14 @@ void printArray(int arr[], int len){
     }
 }
 
+
 void inputArray(int arr[], int len){
     int i;
     for(i = 0; i < len; i++){
         cin >> arr[i];
     }
 }
+
 
 int main(){
     int len, i;
@@ -40,5 +44,5 @@ int main(){
     reverseArray(arr, len);
     cout << "Reversed Array  : ";
     printArray(arr, len);
-    
+
 }
