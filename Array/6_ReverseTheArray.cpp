@@ -21,19 +21,24 @@ void printArray(int arr[], int len){
     }
 }
 
+void inputArray(int arr[], int len){
+    int i;
+    for(i = 0; i < len; i++){
+        cin >> arr[i];
+    }
+}
+
 int main(){
     int len, i;
     cout << "Length of Array : ";
     cin >> len;
 
     int arr[len];
-
     cout << "Input elements  : ";
-    for(i = 0; i < len; i++){
-        cin >> arr[i];
-    }
+    inputArray(arr, len);
     
     reverseArray(arr, len);
     cout << "Reversed Array  : ";
     printArray(arr, len);
+    
 }
