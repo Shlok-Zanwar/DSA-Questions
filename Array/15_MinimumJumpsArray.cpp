@@ -54,4 +54,5 @@ int main(){
     cout << "Input elements  : ";
     inputArray(arr, len);
     
+    cout << "Min Jumps : " << minimumNoOfJumps(arr, len);
 }
