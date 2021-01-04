@@ -2,15 +2,6 @@
 using namespace std;
 
 
-
-void printArray(int arr[], int len){
-    int i;
-    for(i = 0; i < len; i++){
-        cout << arr[i] << " ";
-    }
-}
-
-
 void inputArray(int arr[], int len){
     int i;
     for(i = 0; i < len; i++){
