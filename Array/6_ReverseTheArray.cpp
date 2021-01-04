@@ -2,20 +2,6 @@
 using namespace std;
 
 
-void reverseArray(int arr[], int len){
-    int i;
-    for(i = 0; i < len/2; i ++){
-        // swap(arr[i], arr[len - i - 1]);
-
-        // Swap in O(0) space complexity
-        arr[i] = arr[i] + arr[len - i - 1];
-        arr[len - i - 1] = arr[i] - arr[len - 1 - i];
-        arr[i] = arr[i] - arr[len - i - 1];
-
-    }
-}
-
-
 void printArray(int arr[], int len){
     int i;
     for(i = 0; i < len; i++){
@@ -45,4 +31,18 @@ int main(){
     cout << "Reversed Array  : ";
     printArray(arr, len);
 
+}
+
+
+void reverseArray(int arr[], int len){
+    int i;
+    for(i = 0; i < len/2; i ++){
+        // swap(arr[i], arr[len - i - 1]);
+
+        // Swap in O(0) space complexity
+        arr[i] = arr[i] + arr[len - i - 1];
+        arr[len - i - 1] = arr[i] - arr[len - 1 - i];
+        arr[i] = arr[i] - arr[len - i - 1];
+
+    }
 }
