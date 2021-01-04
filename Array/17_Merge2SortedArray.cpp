@@ -18,36 +18,35 @@ void inputArray(int arr[], int len){
 }
 
 
-void printMergeArray(int arr1[], int arr2[], int len1, int len2){
-    // sort(arr1, arr1 + len1);
-    // sort(arr2, arr2 + len2);
-
-    int i = 0, j = 0;
-    cout << "Merged Array : " ;
+void mergeArray(int arr1[], int arr2[], int len1, int len2, int mergedArr[], int mergedLen){
+    int i = 0, j = 0, index = 0;
 
     while(i != len1 || j != len2){
         if(arr1[i] <= arr2[j]){
-            cout << arr1[i] << " ";
+            mergedArr[index] = arr1[i];
+            index ++;
             i ++;
         }
         else{
-            cout << arr2[j] << " ";
+            mergedArr[index] = arr2[j];
+            index ++;
             j ++;
         }
     }
 
     while(i < len1){
-        cout << arr1[i] << " ";
+        mergedArr[index] = arr1[i];
+            index ++;
         i ++;
     }
 
     while(j < len2){
-        cout << arr2[j] << " ";
-            j ++;
+        mergedArr[index] = arr2[j];
+        index ++;
+        j ++;
     }
 
     cout << endl;
-
 }
 
 
@@ -67,6 +66,10 @@ int main(){
     cout << "Input elements of 2 : ";
     inputArray(arr2, len2);
 
-    printMergeArray(arr1, arr2, len1, len2);
+    int mergedArr[len1 + len2];
+    mergeArray(arr1, arr2, len1, len2, mergedArr, len1 + len2);
+
+    cout << "Merged Array : " ;
+    printArray(mergedArr, len1 + len2);
     
 }
