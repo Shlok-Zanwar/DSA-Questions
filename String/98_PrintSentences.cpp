@@ -2,14 +2,26 @@
 using namespace std;
 
 
-void printSentenceRec(vector<vector<string>> arr, int currIndex, int maxLen, string currString){
+vector<string> finalStrs;
+
+
+void printFinalString(){
+    int i;
+    for(i = 0; i < finalStrs.size(); i++){
+        cout << finalStrs[i] << endl;
+    }
+}
+
+
+void makeSentenceRec(vector<vector<string>> arr, int currIndex, int maxLen, string currString){
     int i;
     for(i = 0; i < arr[currIndex].size(); i ++){
         if(currIndex == maxLen - 1){
-            cout << currString << arr[currIndex][i] << endl;
+            // cout << currString << arr[currIndex][i] << endl;
+            finalStrs.push_back(currString + arr[currIndex][i]);
         }
         else{
-            printSentenceRec(arr, currIndex + 1, maxLen, currString + arr[currIndex][i] + " ");
+            makeSentenceRec(arr, currIndex + 1, maxLen, currString + arr[currIndex][i] + " ");
         }
     }
 }
@@ -39,6 +51,7 @@ int main(){
     }
 
     cout << "\nString are :-\n\n";
-    printSentenceRec(arr, 0, arr.size(), "");
+    makeSentenceRec(arr, 0, arr.size(), "");
+    printFinalString();
 
 }
