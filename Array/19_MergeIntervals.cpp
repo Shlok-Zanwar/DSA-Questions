@@ -66,7 +66,6 @@ vector<vector<int>> mergeIntervals(vector <vector <int>> input, int len){
 }
 
 
-
 int main(){
     vector <vector <int>> input;
     int len;
