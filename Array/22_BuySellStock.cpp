@@ -3,13 +3,15 @@ using namespace std;
 
 
 int buySellStock(int arr[], int len){
-    int minPrice = 2147483647, profit = 0, i;
+    int minPrice = INT_MAX, profit = 0, i;
 
     for (i = 0; i < len; i++) {
-        if (arr[i] < minPrice)
+        if (arr[i] < minPrice){
             minPrice = arr[i];
-        else if (arr[i] - minPrice > profit)
+        }
+        else if (arr[i] - minPrice > profit){
             profit = arr[i] - minPrice;
+        }
     }
 
     return profit;
