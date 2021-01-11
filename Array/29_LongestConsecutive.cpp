@@ -41,5 +41,6 @@ int main(){
     int arr[len];
     cout << "Input elements  : ";
     inputArray(arr, len);
-    
+
+    cout << "Longest Consecutive numbers = " << findLongestConseqSubseq(arr, len);   
 }
