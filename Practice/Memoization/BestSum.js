@@ -5,7 +5,7 @@ const bestSum = (targetSum, arr, memo = {}) => {
 
     let shortestCombination = null;
 
-    for(let num in arr){
+    for(let num of arr){
         const remainder = targetSum - num;
         const remainderResult = bestSum(remainder, arr, memo);
         if(remainderResult !== null){
@@ -20,7 +20,7 @@ const bestSum = (targetSum, arr, memo = {}) => {
     return shortestCombination;
 }
 
-console.log(howSum(7, [5, 3, 4, 7]));
-console.log(howSum(8, [2, 3, 5]));
-console.log(howSum(8, [1, 4, 5]));
-console.log(howSum(100, [1, 2, 5, 25]));
+console.log(bestSum(7, [5, 3, 4, 7]));
+console.log(bestSum(8, [2, 3, 5]));
+console.log(bestSum(8, [1, 4, 5]));
+console.log(bestSum(100, [1, 2, 5, 25]));
