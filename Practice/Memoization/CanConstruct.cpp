@@ -54,18 +54,17 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    // string arr[] = {"ab", "abc", "cd", "def", "abcd"};
-    // cout << canConstruct("abcdef", arr, 5) << endl;
+    string arr1[] = {"ab", "abc", "cd", "def", "abcd"};
+    cout << canConstruct("abcdef", arr1, 5) << endl;
     
-    // string arr[] = {"bo", "rd", "ate", "t", "ska", "sk", "boar"};
-    // cout << canConstruct("skateboard", arr, 7) << endl;
+    string arr2[] = {"bo", "rd", "ate", "t", "ska", "sk", "boar"};
+    cout << canConstruct("skateboard", arr2, 7) << endl;
 
-    // string arr[] = {"a", "p", "ent", "enter", "ot", "o", "t"};
-    // cout << canConstruct("enterapotentpot", arr, 7) << endl;
+    string arr3[] = {"a", "p", "ent", "enter", "ot", "o", "t"};
+    cout << canConstruct("enterapotentpot", arr3, 7) << endl;
     
-    string arr[] = {"e", "ee", "eee", "eeee", "eeeee", "eeeeee"};
-    // string arr[] = {"e", "f"};
-    cout << canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", arr, 5) << endl;
+    string arr4[] = {"e", "ee", "eee", "eeee", "eeeee", "eeeeee"};
+    cout << canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", arr4, 6) << endl;
     
     
 }
